@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+
+*, body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#app {
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+  color: #000;
+  justify-content: center;
+  grid-gap: 1em;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+}
+
+#ziperror {
+  color: #b33a3a;
+  font-size: 0.75em;
+}
+
+.entry {
+  position: relative;
+  padding: 1em;
+  background: #87ceeb;
+  color: #fff;
+  animation: gradient 15s ease infinite;
+}
+
+.cold {
+  background: linear-gradient(-45deg, #90dffe, #38a3d1, #1e528e, #5b7983);
+  background-size: 400% 400%;
+}
+
+.cool {
+  background: linear-gradient(-45deg, #56cfe1, #64dfdf, #64dfdf, #80ffdb);
+  background-size: 400% 400%;
+}
+
+.warm {
+  background: linear-gradient(-45deg, #fec89a, #f9dcc4, #f8edeb, #fcd5ce);
+  background-size: 400% 400%;
+}
+
+.hot {
+  background: linear-gradient(-45deg, #e1c45e, #b26339, #e9ce5d, #576e71);
+  background-size: 400% 400%;
+}
+
+#entryHolder {
+  position: relative;
+  margin-top: 1em;
+}
+
+#date {
+  opacity: 0.5;
+}
+
+#temp {
+  opacity: 0.85;
+  font-size: 2em;
+}
+
+#content {
+  opacity: 0.85;
+}
+
+#itis {
+  display: none;
+  font-size: 14px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#tempclass {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 3em;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+#tempfeeling {
+  display: inline-block;
+  -webkit-transition : 500ms ease;
+  -moz-transition : 500ms ease;
+  -o-transition : 500ms ease;
+  transition : 500ms ease;
+  transform: translateY(150%);
+}
+
+.animate-in {
+  transform: translateY(0) !important;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display:block;
+  margin-bottom: 0.5em;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  color: #1e1e1e;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  -webkit-transition : border 500ms ease-out;
+  -moz-transition : border 500ms ease-out;
+  -o-transition : border 500ms ease-out;
+  transition : border 500ms ease-out;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus {
+  border: 1px solid #bdbcbc;
+}
+
+button {
+  cursor: pointer;
+  opacity: 0.5;
+  padding: 1em;
+  background: #fff;
+  color: #000;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  border: 1px solid #000;
+  -webkit-transition : opacity 500ms ease-out;
+  -moz-transition : opacity 500ms ease-out;
+  -o-transition : opacity 500ms ease-out;
+  transition : opacity 500ms ease-out;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+  color: #bdbcbc;
+  font-family: 'Abel', sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bdbcbc;
+  font-family: 'Abel', sans-serif;.
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bdbcbc;
+  font-family: 'Abel', sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+/* Gradient animation for the entry background */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
